@@ -1,0 +1,44 @@
+﻿KALA - PRIMERA INSTALACIÓN EN LA PC DEL NEGOCIO
+
+1. En una PC nueva, marca la opción Instalar PostgreSQL 18. Si ya tiene
+PostgreSQL 18, deja esa opción desmarcada. No instales otro servidor sin revisar
+el existente. El programa KALA se instala para la cuenta actual de Windows.
+
+2. Cuando se abra el instalador oficial de PostgreSQL, permite la elevación de
+Windows. Instala PostgreSQL Server y Command Line Tools. pgAdmin es opcional.
+Elige una contraseña para postgres y consérvala. Mantén el puerto 5432 si está
+libre. Completa la instalación; Stack Builder no es necesario para KALA.
+
+3. Al terminar, abre Preparar base nueva de KALA desde el instalador o el menú
+Inicio. Escribe el puerto y la contraseña de postgres. Elige una contraseña de
+conexión local (kala_app), el nombre y usuario del dueño y otra contraseña para
+su cuenta KALA. Usa contraseñas distintas y conserva las tres.
+
+4. El asistente crea kala_db, sus tablas, permisos, una caja principal y un
+administrador. No incluye productos, cajeros ni ventas. WhatsApp y nube quedan
+apagados. Si ya existe la base o los roles de KALA, se detiene sin sustituirlos.
+
+5. Abre KALA. En la conexión local usa la contraseña de kala_app y el puerto.
+Después inicia sesión con el usuario y contraseña del dueño. Desde el panel
+administrativo registra productos, existencias reales y cuentas de cajeros.
+
+6. Configura WhatsApp, bot y nube si los contrataron. Las claves guardadas en tu
+otra PC no se copian. Comprueba la ruta de pg_dump.exe en esta computadora.
+Exporta la clave de recuperación y comprueba un respaldo antes de operar.
+No vuelvas a registrar un webhook existente sin revisar la configuración.
+
+IMPORTANTE
+El instalador contiene el programa y el instalador oficial de PostgreSQL, pero
+la primera instalación es asistida: pide contraseñas, no las inventa ni las
+incluye en archivos. Se necesita permiso de administrador de Windows para
+instalar PostgreSQL. En una actualización deja desmarcada la instalación de
+PostgreSQL y no ejecutes la preparación de base nueva.
+
+Si se interrumpe la creación pueden quedar roles o una base vacía. No se borran
+automáticamente. Conserva el mensaje y solicita revisión. No ejecutes comandos
+para eliminar kala_db en la computadora que ya tiene ventas.
+
+Desinstalar KALA no elimina PostgreSQL ni la base. Los datos y respaldos se
+mantienen separados del programa. La aprobación del instalador de KALA no
+significa que ya se haya configurado correctamente PostgreSQL: espera la
+confirmación de éxito del asistente de base nueva.
